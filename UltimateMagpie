@@ -50,7 +50,7 @@ public class Magpie
 		    ||findKeyword(statement, "English",0) >= 0)
 		    ||findKeyword(statement, "Science",0) >= 0)
 		    ||findKeyword(statement, "Mandarin",0) >= 0)
-
+ 
 		{
 			response = "Tell me more about school";
 		}
