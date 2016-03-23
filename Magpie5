@@ -55,22 +55,8 @@ public class Magpie
 				|| findKeyword(statement,"sister",0) >= 0
 				|| findKeyword(statement,"brother",0) >= 0)
 		{
-		  //Random response if family is mentioned
-		 String getFamilyResponse()
-	      	{
-		    Random f = new Random();
-		    return randomFamily [r.nextInt(randomFamily.length)];
-	      	} 
-	      	String[] randomFamily = {
-	      		"Do you have any grandparents?",
-			  "Older or younger siblings?",
-			  "Do you really think so?",
-			  "Any other siblings",
-			  "Are you parents around often?",
-			  "What do they do for a living?",
-			  "Do you get along with your family?",
-	       }; 
-	      } 
+			response = getRandomFamilyResponse();
+		} 
 		else if (findKeyword(statement,"cat",0) >= 0
 				|| findKeyword(statement, "dog",0) >= 0)
 		{
@@ -87,7 +73,21 @@ public class Magpie
 		}
 		return response;
 	}
-
+	//Random response if family is mentioned
+	String getFamilyResponse()
+      	{
+	    Random f = new Random();
+	    return randomFamily [r.nextInt(randomFamily.length)];
+      	} 
+      	String[] randomFamily = {
+      		"Do you have any grandparents?",
+		  "Older or younger siblings?",
+		  "Do you really think so?",
+		  "Any other siblings",
+		  "Are you parents around often?",
+		  "What do they do for a living?",
+		  "Do you get along with your family?",
+       }; 
 	
 	private int findKeyword(String statement, String goal, int startPos)
 	{
